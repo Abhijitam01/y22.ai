@@ -66,7 +66,7 @@ const PARTNER_LOGOS = [
 
 export default function Hero() {
   return (
-    <section className="relative pt-36 pb-24 overflow-hidden min-h-screen flex items-center">
+    <section className="relative pt-28 lg:pt-36 pb-24 overflow-hidden min-h-screen flex items-center">
       {/* ── Background Effects (simplified) ──────────────── */}
       <div className="absolute inset-0 -z-10 bg-background-light dark:bg-background-dark">
         <div className="absolute inset-0 opacity-[0.08] dark:opacity-[0.04] bg-[url('/assets/grid-bg.svg')] bg-center bg-repeat" />
@@ -100,7 +100,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-[42px] lg:text-[60px] font-bold leading-[1.08] tracking-tight text-primary-text-light dark:text-primary-text-dark"
+              className="text-4xl lg:text-[60px] font-bold leading-[1.08] tracking-tight text-primary-text-light dark:text-primary-text-dark"
             >
               Train with AI Buyers.
               <br className="hidden sm:block" />
@@ -364,7 +364,7 @@ export default function Hero() {
           {STATS.map((stat) => (
             <div
               key={stat.label}
-              className="group relative p-10 rounded-[24px] glass-card border border-white/[0.05] hover:border-studio/15 transition-all duration-500 card-shadow card-shadow-hover overflow-hidden"
+              className="group relative p-6 lg:p-10 rounded-[24px] glass-card border border-white/[0.05] hover:border-studio/15 transition-all duration-500 card-shadow card-shadow-hover overflow-hidden"
             >
               <div className="absolute inset-0 bg-studio/[0.02] opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[24px]" />
 

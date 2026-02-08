@@ -30,7 +30,7 @@ export default function Footer() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <footer className="pt-28 pb-16 bg-background-light dark:bg-black text-primary-text-light dark:text-white relative overflow-hidden transition-colors duration-300">
+    <footer className="pt-16 lg:pt-28 pb-16 bg-background-light dark:bg-black text-primary-text-light dark:text-white relative overflow-hidden transition-colors duration-300">
       {/* Background Shape */}
       <img 
         src="/assets/footer-shape.png" 

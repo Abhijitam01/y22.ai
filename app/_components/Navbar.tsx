@@ -200,7 +200,7 @@ export default function Navbar() {
                 <div key={link.label} className="space-y-4">
                   <Link 
                     href={link.href}
-                    className="text-xl font-semibold active:text-stream"
+                    className="text-xl font-semibold text-primary-text-light dark:text-primary-text-dark active:text-stream"
                     onClick={() => !link.dropdown && setIsOpen(false)}
                   >
                     {link.label}
@@ -211,7 +211,7 @@ export default function Navbar() {
                         <Link 
                           key={item.label} 
                           href={item.href}
-                          className="block text-body-sm opacity-60"
+                          className="block text-body-sm text-subtle-text-light dark:text-subtle-text-dark opacity-80 hover:opacity-100 transition-opacity"
                           onClick={() => setIsOpen(false)}
                         >
                           {item.label}
