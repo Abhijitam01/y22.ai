@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus, Twitter, Github, Linkedin, MessageCircle } from "lucide-react";
 import Link from "next/link";
+import FooterLogo from "./FooterLogo";
 import { Y22_URLS } from "../../lib/config";
 
 const FAQS = [
