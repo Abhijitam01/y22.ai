@@ -4,8 +4,8 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown, Rocket, Sun, Moon, ArrowRight } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { Y22_URLS } from "@/lib/config";
+import { cn } from "../../lib/utils";
+import { Y22_URLS } from "../../lib/config";
 
 const NAV_LINKS = [
   { label: "Home", href: "/" },

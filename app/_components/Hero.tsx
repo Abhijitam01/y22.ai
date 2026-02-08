@@ -14,7 +14,7 @@ import {
   Sparkles,
   Calendar,
 } from "lucide-react";
-import { Y22_URLS } from "@/lib/config";
+import { Y22_URLS } from "../../lib/config";
 
 /* ─── Stats row data ─────────────────────────────────────────── */
 const STATS = [
