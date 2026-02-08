@@ -129,32 +129,48 @@ html:not(.dark) section {
 
 /* ── Light mode SVG diagrams ─────────────────────────────────── */
 
+/* Base (Dark Mode) overrides for hardcoded SVG colors */
+svg text[fill="#3B82F6"] { fill: #F5F5F7; }
+svg text[fill="#F59E0B"] { fill: #A1A1AA; }
+svg text[fill="#A1A1AA"] { fill: #71717A; }
+
 html:not(.dark) svg text {
   fill: #0A0A0B;
 }
 
-html:not(.dark) svg text[fill="#3B82F6"] { fill: #2563EB; }
-html:not(.dark) svg text[fill="#F59E0B"] { fill: #D97706; }
-html:not(.dark) svg text[fill="#A1A1AA"] { fill: #52525B; }
+html:not(.dark) svg text[fill="#3B82F6"] { fill: #0A0A0B; }
+html:not(.dark) svg text[fill="#F59E0B"] { fill: #52525B; }
+html:not(.dark) svg text[fill="#A1A1AA"] { fill: #71717A; }
 html:not(.dark) svg text[fill="white"]   { fill: #ffffff; }
+
+/* Base (Dark Mode) overrides for shapes */
+svg rect[stroke="#3B82F6"], svg circle[stroke="#3B82F6"], svg path[stroke="#3B82F6"] { stroke: #F5F5F7; stroke-opacity: 0.8; }
+svg rect[fill="#3B82F6"], svg circle[fill="#3B82F6"] { fill: #F5F5F7; fill-opacity: 0.1; }
+
+svg rect[stroke="#F59E0B"], svg circle[stroke="#F59E0B"], svg path[stroke="#F59E0B"] { stroke: #A1A1AA; stroke-opacity: 0.8; }
+svg rect[fill="#F59E0B"], svg circle[fill="#F59E0B"] { fill: #A1A1AA; fill-opacity: 0.1; }
 
 html:not(.dark) svg rect[stroke="#3B82F6"],
 html:not(.dark) svg circle[stroke="#3B82F6"] {
-  stroke-opacity: 0.5;
+  stroke: #0A0A0B; /* Black stroke */
+  stroke-opacity: 0.8;
 }
 
 html:not(.dark) svg rect[fill="#3B82F6"],
 html:not(.dark) svg circle[fill="#3B82F6"] {
+  fill: #0A0A0B; /* Black fill */
   fill-opacity: 0.12;
 }
 
 html:not(.dark) svg rect[stroke="#F59E0B"],
 html:not(.dark) svg circle[stroke="#F59E0B"] {
+  stroke: #52525B; /* Zinc-600 */
   stroke-opacity: 0.5;
 }
 
 html:not(.dark) svg rect[fill="#F59E0B"],
 html:not(.dark) svg circle[fill="#F59E0B"] {
+  fill: #52525B; /* Zinc-600 */
   fill-opacity: 0.12;
 }
 
@@ -163,9 +179,9 @@ html:not(.dark) svg circle[stroke="#A1A1AA"] {
   stroke-opacity: 0.5;
 }
 
-html:not(.dark) svg path[stroke="#3B82F6"] { stroke: #2563EB; }
-html:not(.dark) svg path[stroke="#F59E0B"] { stroke: #D97706; }
-html:not(.dark) svg path[stroke="#A1A1AA"] { stroke: #52525B; }
+html:not(.dark) svg path[stroke="#3B82F6"] { stroke: #0A0A0B; }
+html:not(.dark) svg path[stroke="#F59E0B"] { stroke: #52525B; }
+html:not(.dark) svg path[stroke="#A1A1AA"] { stroke: #71717A; }
 
 /* Boost container card fills in light mode */
 html:not(.dark) svg rect[fill="currentColor"] {
@@ -222,9 +238,11 @@ html:not(.dark) .animate-ticker-reverse svg {
 
 /* ── Light mode stat badges/pills ────────────────────────────── */
 
-html:not(.dark) .text-stream  { color: #2563EB !important; }
-html:not(.dark) .text-studio  { color: #D97706 !important; }
-html:not(.dark) .text-cloud   { color: #52525B !important; }
+/* ── Light mode stat badges/pills ────────────────────────────── */
+
+html:not(.dark) .text-stream  { color: #0A0A0B !important; }
+html:not(.dark) .text-studio  { color: #52525B !important; }
+html:not(.dark) .text-cloud   { color: #71717A !important; }
 
 /* ── Light mode decorative glow ──────────────────────────────── */
 
@@ -260,7 +278,7 @@ html:not(.dark) img[src*="-dark.webp"] {
 /* ── Light mode selection ────────────────────────────────────── */
 
 html:not(.dark) ::selection {
-  background-color: #3B82F622;
+  background-color: #0A0A0B22;
   color: #0A0A0B;
 }
 
@@ -306,7 +324,7 @@ html.dark header.scrolled {
 }
 
 html.dark ::selection {
-  background-color: #3B82F633;
+  background-color: #F5F5F733;
   color: #F5F5F7;
 }
 
@@ -355,8 +373,13 @@ html.dark ::selection {
 }
 
 @keyframes glow-pulse {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
-  50%      { box-shadow: 0 0 20px 4px rgba(59, 130, 246, 0.12); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(10, 10, 11, 0); }
+  50%      { box-shadow: 0 0 20px 4px rgba(10, 10, 11, 0.12); }
+}
+
+@keyframes glow-pulse-purple {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(82, 82, 91, 0); }
+  50%      { box-shadow: 0 0 20px 4px rgba(82, 82, 91, 0.15); }
 }
 
 /* ═══════════════════════════════════════════════════════════════
@@ -464,6 +487,33 @@ header {
   transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1) !important;
 }
 
+/* ── FAQ purple hover interactions ────────────────────────────── */
+
+[data-slot="faq-item"]:hover [data-slot="faq-question"] {
+  color: #52525B !important;
+}
+
+html:not(.dark) [data-slot="faq-item"]:hover [data-slot="faq-question"] {
+  color: #0A0A0B !important;
+}
+
+[data-slot="faq-item"]:hover {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+html:not(.dark) [data-slot="faq-item"]:hover {
+  background: rgba(10, 10, 11, 0.04);
+}
+
+[data-slot="faq-item"][data-state="open"] [data-slot="faq-question"] {
+  color: #F5F5F7 !important;
+}
+
+html:not(.dark) [data-slot="faq-item"][data-state="open"] [data-slot="faq-question"] {
+  color: #0A0A0B !important;
+}
+
 /* ── Floating decoration effect ──────────────────────────────── */
 
 .micro-float {
@@ -473,20 +523,21 @@ header {
 /* ── Glow pulse on service section active ────────────────────── */
 
 .micro-glow-stream { animation: glow-pulse 3s ease-in-out infinite; }
+.micro-glow-purple { animation: glow-pulse-purple 3s ease-in-out infinite; }
 
 /* ═══════════════════════════════════════════════════════════════
    Gradient Text Utilities
    ═══════════════════════════════════════════════════════════════ */
 
 .gradient-text-stream {
-  background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
+  background: linear-gradient(135deg, #F5F5F7 0%, #A1A1AA 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
 html:not(.dark) .gradient-text-stream {
-  background: linear-gradient(135deg, #2563EB 0%, #7C3AED 100%);
+  background: linear-gradient(135deg, #0A0A0B 0%, #52525B 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -502,25 +553,28 @@ html:not(.dark) .gradient-text-stream {
   gap: 0.5rem;
   padding: 1rem 2rem;
   border-radius: 9999px;
-  background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%);
-  color: white;
+  background: #F5F5F7;
+  color: #0A0A0B;
   font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 14px -2px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 4px 14px -2px rgba(255, 255, 255, 0.2);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px -4px rgba(59, 130, 246, 0.4);
+  box-shadow: 0 8px 24px -4px rgba(255, 255, 255, 0.3);
+  background: #FFFFFF;
 }
 
 html:not(.dark) .btn-primary {
-  background: linear-gradient(135deg, #2563EB 0%, #7C3AED 100%);
-  box-shadow: 0 4px 14px -2px rgba(37, 99, 235, 0.3);
+  background: #0A0A0B;
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px -2px rgba(10, 10, 11, 0.3);
 }
 
 html:not(.dark) .btn-primary:hover {
-  box-shadow: 0 8px 24px -4px rgba(37, 99, 235, 0.4);
+  box-shadow: 0 8px 24px -4px rgba(10, 10, 11, 0.4);
+  background: #000000;
 }
 
 /* ═══════════════════════════════════════════════════════════════

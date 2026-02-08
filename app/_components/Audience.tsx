@@ -78,7 +78,7 @@ export default function Audience() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.12 }}
               data-slot="card"
-              className="group relative p-10 rounded-[24px] glass-card border border-white/[0.05] hover:border-stream/15 flex flex-col justify-between transition-all duration-500 card-shadow card-shadow-hover overflow-hidden"
+              className="group relative p-10 rounded-[24px] glass-card border border-white/[0.05] hover:border-studio/15 flex flex-col justify-between transition-all duration-500 card-shadow card-shadow-hover overflow-hidden"
             >
               {/* Hover glow */}
               <div className={`absolute top-0 right-0 w-48 h-48 ${tier.colorClass === 'stream' ? 'bg-stream/[0.03]' : tier.colorClass === 'studio' ? 'bg-studio/[0.03]' : 'bg-cloud/[0.03]'} blur-[60px] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700`} />

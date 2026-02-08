@@ -82,7 +82,7 @@ export default function Navbar() {
       <div className="container mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-           <img src="/assets/y22/logo.svg" alt="Y22" className="h-10 dark:invert dark:brightness-100" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; (e.target as HTMLImageElement).nextElementSibling!.classList.remove('hidden'); }} />
+           <img src="/assets/y22/logo.svg" alt="Y22" className="h-10 dark:invert" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; (e.target as HTMLImageElement).nextElementSibling!.classList.remove('hidden'); }} />
            <span className="text-2xl font-bold tracking-tighter hidden">
               <span className="text-stream">Y22</span>.ai
            </span>
@@ -99,7 +99,7 @@ export default function Navbar() {
             >
               <Link 
                 href={link.href}
-                className="text-body-sm font-medium text-primary-text-light dark:text-primary-text-dark hover:text-stream transition-colors flex items-center gap-1"
+                className="text-body-sm font-medium text-primary-text-light dark:text-primary-text-dark hover:text-studio transition-colors flex items-center gap-1"
               >
                 {link.label}
                 {link.dropdown && <ChevronDown className="size-4 opacity-50 transition-transform group-hover:rotate-180" />}
@@ -165,12 +165,12 @@ export default function Navbar() {
             <ArrowRight className="size-4" />
           </Link>
           
-          {/* Book Demo Button - Now secondary */}
+          {/* Book Demo Button - Now secondary with purple hover */}
           <Link 
             href={Y22_URLS.marketing.demo}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden lg:flex items-center gap-2 px-6 py-2.5 rounded-full glass-strong border border-white/[0.08] hover:border-stream/25 transition-all text-body-sm font-medium text-primary-text-light dark:text-primary-text-dark"
+            className="hidden lg:flex items-center gap-2 px-6 py-2.5 rounded-full glass-strong border border-white/[0.08] hover:border-white/30 hover:bg-white/5 transition-all text-body-sm font-medium text-primary-text-light dark:text-primary-text-dark"
           >
             <Rocket className="size-4" />
             Book Demo

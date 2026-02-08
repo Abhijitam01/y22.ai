@@ -46,7 +46,7 @@ export default function AIMagic() {
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
-                    className="flex gap-5 p-6 rounded-2xl glass-card border border-white/[0.04] hover:border-stream/15 transition-all duration-500 group"
+                    className="flex gap-5 p-6 rounded-2xl glass-card border border-white/[0.04] hover:border-studio/15 transition-all duration-500 group"
                   >
                     <div className={`p-3.5 rounded-xl ${feature.color === 'stream' ? 'bg-stream/12 text-stream' : feature.color === 'studio' ? 'bg-studio/12 text-studio' : 'bg-cloud/12 text-cloud'} h-fit flex-shrink-0 group-hover:scale-105 transition-transform duration-500`}>
                       <feature.icon className="size-6" />

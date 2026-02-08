@@ -44,16 +44,20 @@ const config: Config = {
           light: "#E4E4E7",
           dark: "#F5F5F714",
         },
-        /* Primary accent — refined blue */
-        stream: "#3B82F6",
-        "stream-light": "#2563EB",
-        /* Secondary warm accent — muted amber */
-        studio: "#F59E0B",
-        "studio-light": "#D97706",
-        /* Tertiary — muted violet */
-        cloud: "#8B5CF6",
-        "cloud-light": "#7C3AED",
-        "cloud-alt": "#A1A1AA",
+        /* Primary accent — Monochrome (Black/White) */
+        stream: "#0A0A0B", // Black for light mode
+        "stream-light": "#18181B", // Slightly lighter black
+        /* Secondary intelligence/system color — Neutral Gray */
+        studio: "#71717A", // Zinc-500
+        "studio-light": "#52525B", // Zinc-600
+        "studio-dim": "#3F3F46", // Zinc-700
+        /* Tertiary — soft gray for accents */
+        cloud: "#A1A1AA", // Zinc-400
+        "cloud-light": "#D4D4D8", // Zinc-300
+        "cloud-alt": "#71717A", // Zinc-500
+        /* Lavender-white tones for logos -> Clean White/Off-white */
+        "lavender-white": "#FAFAFA",
+        "lavender-white-dim": "#F4F4F5",
       },
       fontFamily: {
         sans: ["Barlow", "system-ui", "sans-serif"],

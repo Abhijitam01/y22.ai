@@ -4,7 +4,6 @@ import Challenges from "./_components/Challenges";
 import AIMagic from "./_components/AIMagic";
 import Efficiency from "./_components/Efficiency";
 import BuiltForYourTeam from "./_components/BuiltForYourTeam";
-import Convergence from "./_components/Convergence";
 import Platform from "./_components/Platform";
 import Ecosystem from "./_components/Ecosystem";
 import Pricing from "./_components/Pricing";
@@ -19,10 +18,9 @@ export default function Home() {
       <AIMagic />
       <Efficiency />
       <BuiltForYourTeam />
-      <Convergence />
       <Platform />
-      <Ecosystem />
       <Pricing />
+      <Ecosystem />
       <Footer />
     </>
   );

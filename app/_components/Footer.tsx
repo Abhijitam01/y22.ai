@@ -42,14 +42,20 @@ export default function Footer() {
           <h2 className="text-h3 lg:text-h2 font-bold text-center mb-16">Frequently Asked Questions</h2>
           <div className="space-y-4">
             {FAQS.map((faq, i) => (
-              <div key={i} className="border-b border-white/8">
+              <div 
+                key={i} 
+                className="border-b border-white/8 transition-all duration-300" 
+                data-slot="faq-item"
+                data-state={openIndex === i ? "open" : "closed"}
+              >
                 <button
-                  className="w-full py-7 flex items-center justify-between text-left hover:text-stream transition-colors group"
+                  className="w-full py-7 flex items-center justify-between text-left transition-colors group"
                   onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                  data-slot="faq-trigger"
                 >
-                  <span className="text-h5 font-semibold">{faq.question}</span>
-                  <div className="p-2 rounded-full group-hover:bg-white/5 transition-colors">
-                    {openIndex === i ? <Minus className="size-5" /> : <Plus className="size-5" />}
+                  <span className="text-h5 font-semibold transition-colors" data-slot="faq-question">{faq.question}</span>
+                  <div className="p-2 rounded-full group-hover:bg-studio/10 transition-colors">
+                    {openIndex === i ? <Minus className="size-5 text-studio" /> : <Plus className="size-5" />}
                   </div>
                 </button>
                 <AnimatePresence>
@@ -74,24 +80,24 @@ export default function Footer() {
         {/* Footer Links & Branding */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-14 mb-24 border-t border-white/8 pt-20">
           <div className="col-span-1 md:col-span-1 space-y-7">
-            <Link href="/" className="inline-block">
-               <img src="/assets/y22/footer-logo.svg" className="w-44" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+            <Link href="/" className="inline-block group">
+               <img src="/assets/y22/footer-logo.svg" className="w-44 opacity-90 group-hover:opacity-100 transition-opacity invert dark:invert-0" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
             </Link>
             <p className="text-body-sm opacity-40 max-w-xs leading-relaxed">
               Train with AI. Cheat on Sales Calls. Close the Deal. 
               The AI-powered sales training and enablement platform.
             </p>
             <div className="flex gap-4">
-              <Link href={Y22_URLS.social.twitter} target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-lg bg-white/5 hover:bg-stream/15 hover:text-stream transition-all">
+              <Link href={Y22_URLS.social.twitter} target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-lg bg-white/5 hover:bg-studio/15 hover:text-studio transition-all">
                 <Twitter className="size-5" />
               </Link>
-              <Link href={Y22_URLS.social.github} target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-lg bg-white/5 hover:bg-stream/15 hover:text-stream transition-all">
+              <Link href={Y22_URLS.social.github} target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-lg bg-white/5 hover:bg-studio/15 hover:text-studio transition-all">
                 <Github className="size-5" />
               </Link>
-              <Link href={Y22_URLS.social.linkedin} target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-lg bg-white/5 hover:bg-stream/15 hover:text-stream transition-all">
+              <Link href={Y22_URLS.social.linkedin} target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-lg bg-white/5 hover:bg-studio/15 hover:text-studio transition-all">
                 <Linkedin className="size-5" />
               </Link>
-              <Link href={Y22_URLS.social.discord} target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-lg bg-white/5 hover:bg-stream/15 hover:text-stream transition-all">
+              <Link href={Y22_URLS.social.discord} target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-lg bg-white/5 hover:bg-studio/15 hover:text-studio transition-all">
                 <MessageCircle className="size-5" />
               </Link>
             </div>
@@ -100,29 +106,29 @@ export default function Footer() {
           <div className="space-y-7">
             <h4 className="text-body-lg font-bold">Product</h4>
             <ul className="space-y-5 opacity-50 text-body-sm">
-              <li><Link href={Y22_URLS.products.whisper} target="_blank" rel="noopener noreferrer" className="hover:text-stream transition-colors">Whisper</Link></li>
-              <li><Link href={Y22_URLS.products.roleplay} target="_blank" rel="noopener noreferrer" className="hover:text-stream transition-colors">AI Roleplay</Link></li>
-              <li><Link href={Y22_URLS.products.analytics} target="_blank" rel="noopener noreferrer" className="hover:text-stream transition-colors">Call Analytics</Link></li>
-              <li><Link href={Y22_URLS.marketing.pricing} target="_blank" rel="noopener noreferrer" className="hover:text-stream transition-colors">Pricing</Link></li>
+              <li><Link href={Y22_URLS.products.whisper} target="_blank" rel="noopener noreferrer" className="hover:text-studio transition-colors">Whisper</Link></li>
+              <li><Link href={Y22_URLS.products.roleplay} target="_blank" rel="noopener noreferrer" className="hover:text-studio transition-colors">AI Roleplay</Link></li>
+              <li><Link href={Y22_URLS.products.analytics} target="_blank" rel="noopener noreferrer" className="hover:text-studio transition-colors">Call Analytics</Link></li>
+              <li><Link href={Y22_URLS.marketing.pricing} target="_blank" rel="noopener noreferrer" className="hover:text-studio transition-colors">Pricing</Link></li>
             </ul>
           </div>
 
           <div className="space-y-7">
             <h4 className="text-body-lg font-bold">Resources</h4>
             <ul className="space-y-5 opacity-50 text-body-sm">
-              <li><Link href={Y22_URLS.marketing.blog} target="_blank" rel="noopener noreferrer" className="hover:text-stream transition-colors">Blog</Link></li>
-              <li><Link href={Y22_URLS.marketing.about} target="_blank" rel="noopener noreferrer" className="hover:text-stream transition-colors">About Us</Link></li>
-              <li><Link href={Y22_URLS.marketing.contact} target="_blank" rel="noopener noreferrer" className="hover:text-stream transition-colors">Contact</Link></li>
-              <li><Link href="#faq" className="hover:text-stream transition-colors">FAQ</Link></li>
+              <li><Link href={Y22_URLS.marketing.blog} target="_blank" rel="noopener noreferrer" className="hover:text-studio transition-colors">Blog</Link></li>
+              <li><Link href={Y22_URLS.marketing.about} target="_blank" rel="noopener noreferrer" className="hover:text-studio transition-colors">About Us</Link></li>
+              <li><Link href={Y22_URLS.marketing.contact} target="_blank" rel="noopener noreferrer" className="hover:text-studio transition-colors">Contact</Link></li>
+              <li><Link href="#faq" className="hover:text-studio transition-colors">FAQ</Link></li>
             </ul>
           </div>
 
           <div className="space-y-7">
             <h4 className="text-body-lg font-bold">Legal</h4>
             <ul className="space-y-5 opacity-50 text-body-sm">
-              <li><Link href={Y22_URLS.legal.terms} target="_blank" rel="noopener noreferrer" className="hover:text-stream transition-colors">Terms of Service</Link></li>
-              <li><Link href={Y22_URLS.legal.privacy} target="_blank" rel="noopener noreferrer" className="hover:text-stream transition-colors">Privacy Policy</Link></li>
-              <li><Link href={Y22_URLS.legal.cookies} target="_blank" rel="noopener noreferrer" className="hover:text-stream transition-colors">Cookie Policy</Link></li>
+              <li><Link href={Y22_URLS.legal.terms} target="_blank" rel="noopener noreferrer" className="hover:text-studio transition-colors">Terms of Service</Link></li>
+              <li><Link href={Y22_URLS.legal.privacy} target="_blank" rel="noopener noreferrer" className="hover:text-studio transition-colors">Privacy Policy</Link></li>
+              <li><Link href={Y22_URLS.legal.cookies} target="_blank" rel="noopener noreferrer" className="hover:text-studio transition-colors">Cookie Policy</Link></li>
             </ul>
           </div>
         </div>

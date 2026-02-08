@@ -150,10 +150,10 @@ export default function Hero() {
                   href={Y22_URLS.marketing.demo}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex items-center gap-3 px-8 py-4 rounded-full glass-strong border border-card-border-light dark:border-white/8 hover:border-stream/25 transition-all text-[17px] font-medium text-primary-text-light dark:text-primary-text-dark"
+                  className="group flex items-center gap-3 px-8 py-4 rounded-full glass-strong border border-card-border-light dark:border-white/8 hover:border-studio/30 hover:bg-studio/5 transition-all text-[17px] font-medium text-primary-text-light dark:text-primary-text-dark"
                 >
-                  <span className="size-9 rounded-full bg-stream/15 flex items-center justify-center group-hover:bg-stream/25 transition-colors">
-                    <Calendar className="size-4 text-stream" />
+                  <span className="size-9 rounded-full bg-studio/15 flex items-center justify-center group-hover:bg-studio/25 transition-colors">
+                    <Calendar className="size-4 text-studio" />
                   </span>
                   Book a Demo
                 </a>
@@ -227,7 +227,7 @@ export default function Hero() {
             <div className="absolute -inset-10 bg-stream/8 dark:bg-stream/[0.04] blur-[80px] rounded-[40px]" />
 
             {/* Main platform card */}
-            <div className="relative glass-card rounded-[28px] overflow-hidden border border-white/[0.06] shadow-2xl shadow-black/20">
+            <div className="relative glass-card rounded-[28px] overflow-hidden border border-white/[0.06] shadow-2xl shadow-black/20 hover:border-studio/10 transition-all duration-500">
               <img
                 src="/assets/y22/train-platform.png"
                 alt="Y22 Platform"
@@ -364,9 +364,9 @@ export default function Hero() {
           {STATS.map((stat) => (
             <div
               key={stat.label}
-              className="group relative p-10 rounded-[24px] glass-card border border-white/[0.05] hover:border-stream/15 transition-all duration-500 card-shadow card-shadow-hover overflow-hidden"
+              className="group relative p-10 rounded-[24px] glass-card border border-white/[0.05] hover:border-studio/15 transition-all duration-500 card-shadow card-shadow-hover overflow-hidden"
             >
-              <div className="absolute inset-0 bg-stream/[0.02] opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[24px]" />
+              <div className="absolute inset-0 bg-studio/[0.02] opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[24px]" />
 
               <div className="relative flex flex-col">
                 {/* Icon + Value */}

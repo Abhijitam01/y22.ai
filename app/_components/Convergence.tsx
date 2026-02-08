@@ -155,8 +155,17 @@ export default function Convergence() {
                           });
                         }
                       }}
-                      className="block text-left w-full group"
+                      className="block text-left w-full group relative pl-4"
                     >
+                      {/* Active indicator line */}
+                      <motion.div
+                        animate={{
+                          opacity: isActive ? 1 : 0,
+                          scaleY: isActive ? 1 : 0.5,
+                        }}
+                        transition={{ duration: 0.3, ease: "easeOut" }}
+                        className="absolute left-0 top-1/2 -translate-y-1/2 w-0.5 h-6 bg-studio rounded-full"
+                      />
                       <motion.span
                         animate={{
                           opacity: isActive ? 1 : 0.3,
@@ -167,8 +176,8 @@ export default function Convergence() {
                           text-body-md transition-colors duration-300
                           ${
                             isActive
-                              ? "text-primary-text-light dark:text-primary-text-dark"
-                              : "text-subtle-text-light dark:text-subtle-text-dark group-hover:opacity-50"
+                              ? "text-studio"
+                              : "text-subtle-text-light dark:text-subtle-text-dark group-hover:text-studio/70"
                           }
                         `}
                       >
