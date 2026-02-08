@@ -44,20 +44,20 @@ const config: Config = {
           light: "#E4E4E7",
           dark: "#F5F5F714",
         },
-        /* Primary accent — Monochrome (Black/White) */
-        stream: "#0A0A0B", // Black for light mode
-        "stream-light": "#18181B", // Slightly lighter black
-        /* Secondary intelligence/system color — Neutral Gray */
-        studio: "#71717A", // Zinc-500
-        "studio-light": "#52525B", // Zinc-600
-        "studio-dim": "#3F3F46", // Zinc-700
-        /* Tertiary — soft gray for accents */
-        cloud: "#A1A1AA", // Zinc-400
-        "cloud-light": "#D4D4D8", // Zinc-300
-        "cloud-alt": "#71717A", // Zinc-500
-        /* Lavender-white tones for logos -> Clean White/Off-white */
-        "lavender-white": "#FAFAFA",
-        "lavender-white-dim": "#F4F4F5",
+        /* Primary accent — Purple (CTAs & primary actions) */
+        stream: "#8B5CF6", // Violet-500
+        "stream-light": "#7C3AED", // Violet-600
+        /* Secondary intelligence/system color — deep muted purple */
+        studio: "#8B5CF6",
+        "studio-light": "#7C3AED",
+        "studio-dim": "#6D28D9",
+        /* Tertiary — soft lavender for accents */
+        cloud: "#A78BFA",
+        "cloud-light": "#C4B5FD",
+        "cloud-alt": "#A1A1AA",
+        /* Lavender-white tones for logos */
+        "lavender-white": "#F5F3FF",
+        "lavender-white-dim": "#EDE9FE",
       },
       fontFamily: {
         sans: ["Barlow", "system-ui", "sans-serif"],

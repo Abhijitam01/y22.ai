@@ -81,7 +81,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-14 mb-24 border-t border-white/8 pt-20">
           <div className="col-span-1 md:col-span-1 space-y-7">
             <Link href="/" className="inline-block group">
-               <img src="/assets/y22/footer-logo.svg" className="w-44 opacity-90 group-hover:opacity-100 transition-opacity invert dark:invert-0" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
+               <img src="/assets/y22/footer-logo.svg" className="w-44 opacity-90 group-hover:opacity-100 transition-opacity invert hue-rotate-180" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
             </Link>
             <p className="text-body-sm opacity-40 max-w-xs leading-relaxed">
               Train with AI. Cheat on Sales Calls. Close the Deal. 
