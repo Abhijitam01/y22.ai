@@ -8,6 +8,7 @@ import Platform from "./_components/Platform";
 import Ecosystem from "./_components/Ecosystem";
 import Pricing from "./_components/Pricing";
 import Footer from "./_components/Footer";
+import Convergence from "./_components/Convergence";
 
 export default function Home() {
   return (
@@ -17,8 +18,8 @@ export default function Home() {
       <Challenges />
       <AIMagic />
       <Efficiency />
-      <BuiltForYourTeam />
-      <Platform />
+      <Platform/>
+      <Convergence/>
       <Pricing />
       <Ecosystem />
       <Footer />
